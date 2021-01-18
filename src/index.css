@@ -1,13 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Poppins";
+  background-color: #d9dde0;
+}
+/* Styling Home */
+.container-fluid {
+  padding: 40px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.title {
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+/* Styling Header */
+.navbar {
+  display: flex;
+  border-bottom: 5px solid black;
+  border-radius: 0 0 12px 12px;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h2 {
+  width: max-content;
+  height: max-content;
+  margin: 0 10px 0 0;
+}
+
+.boxlink {
+  display: flex;
+  justify-content: space-around;
+  width: 450px;
+}
+
+.dashboard {
+  font-size: large;
+  color: black;
+}
+
+.dashboard:hover,
+.dashboard:focus {
+  color: black;
+  font-weight: bold;
+  list-style: none;
+  text-decoration: none;
+}
+
+.contact {
+  font-size: large;
+  color: black;
+}
+
+.contact:hover,
+.contact:focus {
+  color: black;
+  font-weight: bold;
+  list-style: none;
+  text-decoration: none;
+}
+
+.apifordevelopers {
+  font-size: large;
+  color: black;
+}
+
+.apifordevelopers:hover,
+.apifordevelopers:focus {
+  color: black;
+  font-weight: bold;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Styling Burger Menu */
+.hamburgermenu {
+  display: none;
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  right: 30px;
+  top: 30px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  position: absolute;
+  top: -20px;
+  background: #bdc3c7;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  transform: translate3d(10%, 0px, 0px);
+}
+
+/* General sidebar styles */
+.bm-menu {
+  position: absolute;
+  top: -50px;
+  background: #373a47;
+  width: 110%;
+  height: 110% !important;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Styling of overlay */
+div.bm-overlay {
+  background: none !important;
+}
+
+/* Styling Card */
+.boxcard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 23%;
+  height: 150px;
+  border-radius: 12px;
+}
+
+.boxincard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+}
+
+.boxcard p {
+  width: 200px;
+  margin: 0;
+}
+
+/* Styling Chart */
+.boxchart {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Styling Data By Province */
+.boxdatabyprovince {
+  display: block;
+  width: 100%;
+  height: 400px;
+  overflow-x: auto;
+  overflow-y: auto;
+  border-radius: 12px 12px 0 0;
+}
+
+.table {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.boxdatabyprovince thead th {
+  position: sticky;
+  top: 0;
+}
+
+.borderno {
+  border: 1px solid black !important;
+}
+
+.borderno li {
+  list-style: none;
+  width: max-content;
+}
+
+.border {
+  border: 1px solid black !important;
+}
+
+/* Styling Contact */
+.boxcontact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  padding: 100px;
+  background-color: white;
+}
+
+.line {
+  width: 280px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.boxcontact p {
+  text-align: center;
+}
+
+.boxemailphone {
+  display: flex;
+}
+
+.boxemail,
+.boxphone {
+  display: flex;
+  align-items: center;
+}
+
+.boxemail img,
+.boxphone img {
+  margin: 0 10px;
+}
+
+.boxemailphone img {
+  display: flex;
+  align-items: center;
+}
+
+.boxemailphone p {
+  margin: 0;
+}
+
+/* Styling Api */
+#boxdata {
+  display: flex;
+  justify-content: space-around;
+}
+
+#boxdata h6 {
+  padding: 10px 0;
+  margin: 0;
+}
+
+#dataindonesia,
+#databyprovince,
+#dataindonesiaallstatus {
+  max-width: none;
+  width: 400px;
+  height: 100%;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.line1 {
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.linkapi {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Styling Footer */
+.footer {
+  display: flex;
+  border-top: 5px solid black;
+  border-radius: 12px 12px 0 0;
+  padding: 10px;
+  background-color: white;
+}
+
+.socialmedia img {
+  padding: 0 5px;
+}
+
+@media (max-width: 1250px) {
+  #dataindonesia,
+  #databyprovince,
+  #dataindonesiaallstatus {
+    width: 300px;
+  }
+}
+
+@media (max-width: 956px) {
+  #dataindonesia,
+  #databyprovince,
+  #dataindonesiaallstatus {
+    width: 250px;
+  }
+}
+
+@media (max-width: 800px) {
+  .boxapi {
+    margin: 10px;
+  }
+  #dataindonesia,
+  #databyprovince,
+  #dataindonesiaallstatus {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+}
+
+@media (max-width: 695px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxcard {
+    width: 90%;
+    margin: 10px 0;
+  }
+  .lastupdate,
+  .datastatistic {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .boxemailphone {
+    display: flex;
+    flex-direction: column;
+  }
+  .boxemail,
+  .boxphone {
+    padding: 10px;
+  }
+  .boxcontact h1 {
+    text-align: center;
+  }
+  .boxcontact {
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 378px) {
+  .hamburgermenu {
+    display: block;
+  }
+  .boxlink {
+    display: none;
+  }
+  .boxcard {
+    width: 100%;
+  }
+  .line {
+    width: 230px;
+  }
+  #dataindonesia,
+  #databyprovince,
+  #dataindonesiaallstatus {
+    width: 300px;
+  }
 }
